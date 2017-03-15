@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta property="og:site_name" content="Genium Tech"/>
+		<meta property="og:title" content="Diffentiating Short A and I"/>
+		<meta property="og:description" content="Differentiating Short A and I Game"/>
+		<meta property="og:image" content="http://geniumtech.com/diffentiatingshortaandi/cover.png"/>
+		<meta property="og:url" content="http://geniumtech.com/diffentiatingshortaandi/index.html"/>
+		<meta property="og:type" content="article"/>
+		<script src="dragAndDrop.js"></script>
+		<script src="generateDragAndDropQuestions.js"></script>
+		<script src="DragDropTouch.js"></script>
+		 <script type="text/javascript">
+        </script>
+	</head>
+	<body>
+		<div id="initialDisplay">
+			<div id="buttonToToggleDisplay" onclick="enterProgram()">
+				<h1> Press </h1> 
+				<img id="playSymbol" src="images/playSymbol.png">
+				<h1> to begin</h1>
+			</div>
+		</div>
+		<div id="mainContainer">
+			<div id="main">
+					<img id="speaker" onclick="speak()" src="images/speaker.png"/>
+					<div id="mainContent">	
+						<div id="leftColumn">
+							<div class="choice" draggable="true" id="choice1" ondragstart="beginDrag(event)">
+							</div>
+							<div class="choice" draggable="true" id="choice2" ondragstart="beginDrag(event)">
+							</div>
+							<!-- Uncomment to add in "u" vowel 
+							<div class="choice" draggable="true" id="choice3" ondragstart="beginDrag(event)">
+							</div>
+							-->
+						</div>
+						<div id="rightColumn">
+							<img id="answerImage" />
+							<!--Where answer is submitted -->
+							<div id="wordBar">
+									<div class="letter" id="letter1"></div>
+									<div class="submit" id="dropHere" ondrop="drop(event)" ondragover="checkIfAnswer(event)"></div>
+									<div class="letter" id="letter3"></div>
+									<!--<div class="letter" id="letter4"></div>-->
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</body>
+</html>
